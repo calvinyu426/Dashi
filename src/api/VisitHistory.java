@@ -15,6 +15,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import db.DBConnection;
+import db.MongoDBConnection;
 import db.MySQLDBConnection;
 
 /**
@@ -23,7 +24,8 @@ import db.MySQLDBConnection;
 @WebServlet("/history")
 public class VisitHistory extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private static final DBConnection connection = new MySQLDBConnection();
+//	private static final DBConnection connection = new MySQLDBConnection();
+	DBConnection connection = new MongoDBConnection();
 
 	/**
 	 * @see HttpServlet#HttpServlet()
